@@ -4,7 +4,7 @@
 #' @param verisetleri Series you want to import.
 #' @param baslangic_tarihi Start date you want
 #' @param bitis_tarihi End date for the data you want
-#' @param frekans Frequency for the data. Default is set automatically by EVDS.
+#' @param frekans Frequency parameter for the data. Default is set automatically by EVDS.
 #'
 #' @return
 #' @export
