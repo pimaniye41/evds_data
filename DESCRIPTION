@@ -5,13 +5,10 @@ Version: 0.1.0
 Author@R: c(person("Efe","Gülkan", email = "efe.gulkan@outlook.com"))
 Description: Importing data from CBRT EVDS with API key.
     API anahtarı ile TCMB EVDS'den veri çekme.
-Depends:
-    tidyverse,
-    RCurl,
-    XML,
-    xml2
 Imports:
-    tidyverse,
+    dplyr,
+    tidyr,
+    stringr,
     RCurl,
     XML,
     xml2
