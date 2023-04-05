@@ -18,6 +18,7 @@
 evds_data2 <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
+  library(readr)
   library(RCurl)
   library(dplyr)
   library(stringr)
