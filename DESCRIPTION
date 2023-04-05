@@ -6,12 +6,11 @@ Author@R: c(person("Efe","Gülkan", email = "efe.gulkan@outlook.com"))
 Description: Importing data from CBRT EVDS with API key.
     API anahtarı ile TCMB EVDS'den veri çekme.
 Imports:
-    dplyr,
-    tidyr,
     stringr,
     RCurl,
-    XML,
-    xml2
+    dplyr,
+    stringr,
+    XML
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
