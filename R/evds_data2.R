@@ -10,17 +10,6 @@
 #' @export
 #'
 #' @examples
-# Install required packages if they are not already installed
-if (!require("tidyverse")) install.packages("tidyverse")
-if (!require("RCurl")) install.packages("RCurl")
-if (!require("XML")) install.packages("XML")
-
-# Load the required packages
-library("tidyverse")
-library("RCurl")
-library("XML")
-
-
 evds_data2 <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
