@@ -1,5 +1,16 @@
-library(tidyverse);library(XML);library(RCurl);
-evds_data2 <- function(anahtar,
+#' Importing data from CBRT EVDS
+#'
+#' @param anahtar Your API key from EVDS, sign up to EVDS for API key.
+#' @param verisetleri Series you want to import.
+#' @param baslangic_tarihi Start date you want
+#' @param bitis_tarihi End date for the data you want
+#' @param frekans Frequency for the data. Default is set automatically by EVDS.
+#'
+#' @return
+#' @export
+#'
+#' @examples
+evds_data <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
 
@@ -36,4 +47,4 @@ evds_data2 <- function(anahtar,
   }
   return(veridf)
 }
-
+?evds_data2
