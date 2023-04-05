@@ -1,16 +1,16 @@
 Package: evdspackage
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Import data from CBRT EVDS
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author@R: c(person("Efe","Gülkan", email = "efe.gulkan@outlook.com"))
+Description: Importing data from CBRT EVDS with API key.
+    API anahtarı ile TCMB EVDS'den veri çekme.
+Imports:
+    tidyverse,
+    RCurl,
+    XML,
+    xml2
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Imports:
-    tidyverse,
-    RCurl,
-    XML
