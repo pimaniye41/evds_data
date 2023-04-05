@@ -14,10 +14,14 @@
 #' @import dplyr
 #' @import stringr
 #' @import XML
+
 evds_data2 <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
-
+  library(RCurl)
+  library(dplyr)
+  library(stringr)
+  library(XML)
   adres <- "https://evds2.tcmb.gov.tr/service/evds/"
   tarihler <- paste("&startDate=",baslangic_tarihi,"&endDate=",bitis_tarihi, sep="")
   tamamlayici <- paste("&type=csv&key=",anahtar,sep="")
