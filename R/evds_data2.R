@@ -10,7 +10,10 @@
 #' @export
 #'
 #' @examples
-remotes::install_deps()
+#' @import RCurl
+#' @import dplyr
+#' @import stringr
+#' @import XML
 evds_data2 <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
