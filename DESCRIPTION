@@ -6,7 +6,6 @@ Author@R: c(person("Efe","Gülkan", email = "efe.gulkan@outlook.com"))
 Description: Importing data from CBRT EVDS with API key.
     API anahtarı ile TCMB EVDS'den veri çekme.
 Imports:
-    stringr,
     RCurl,
     dplyr,
     stringr,
