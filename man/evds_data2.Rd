@@ -7,16 +7,19 @@
 evds_data2(anahtar, verisetleri, baslangic_tarihi, bitis_tarihi, frekans = "")
 }
 \arguments{
-\item{anahtar}{Your API key from EVDS, sign up to EVDS for API key.}
+\item{anahtar}{Your API key from EVDS, sign up to EVDS for API key.    EVDS API anahatarınız.}
 
-\item{verisetleri}{Series you want to import.}
+\item{verisetleri}{Series you want to import.    Cekmek istediginiz seriler}
 
-\item{baslangic_tarihi}{Start date you want}
+\item{baslangic_tarihi}{Start date you want.    Veri baslangic tarihi}
 
-\item{bitis_tarihi}{End date for the data you want}
+\item{bitis_tarihi}{End date for the data you want.    Veri son tarihi}
 
-\item{frekans}{Frequency for the data. Default is set automatically by EVDS.}
+\item{frekans}{Frequency parameter for the data. Default is set automatically by EVDS. 1 to 8, frequent to infrequent.    Veri frekansı, bos birakildiginda varsayilan frekans ile gelir. 1-8 arasi deger}
 }
 \description{
 Importing data from CBRT EVDS
+}
+\examples{
+evds_data2(anahtar = "yourkey", verisetleri = c("TP.PR.ARZ01","TP.KTF10"), baslangic_tarihi = "01-01-2020", bitis_tarihi = "01-03-2023")
 }
