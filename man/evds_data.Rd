@@ -2,7 +2,8 @@
 % Please edit documentation in R/evds_data.R
 \name{evds_data}
 \alias{evds_data}
-\title{Importing data from CBRT EVDS}
+\title{Importing data from CBRT EVDS
+Newer version}
 \usage{
 evds_data(anahtar, verisetleri, baslangic_tarihi, bitis_tarihi, frekans = "")
 }
@@ -19,7 +20,8 @@ evds_data(anahtar, verisetleri, baslangic_tarihi, bitis_tarihi, frekans = "")
 }
 \description{
 Importing data from CBRT EVDS
+Newer version
 }
 \examples{
-evds_data(anahtar = "yourkey", verisetleri = c("TP.PR.ARZ01","TP.KTF10"), baslangic_tarihi = "01-01-2020", bitis_tarihi = "01-03-2023")
+evds_data2(anahtar = "yourkey", verisetleri = c("TP.PR.ARZ01","TP.KTF10"), baslangic_tarihi = "01-01-2020", bitis_tarihi = "01-03-2023")
 }
