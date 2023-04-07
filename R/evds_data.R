@@ -1,4 +1,3 @@
-library(tidyverse);library(XML);library(RCurl);
 evds_data <- function(anahtar,
                       verisetleri,
                       baslangic_tarihi, bitis_tarihi,
