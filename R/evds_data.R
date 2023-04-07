@@ -9,7 +9,7 @@
 #' @return
 #' @export
 #'
-#' @examples evds_data2(anahtar = "yourkey", verisetleri = c("TP.PR.ARZ01","TP.KTF10"), baslangic_tarihi = "01-01-2020", bitis_tarihi = "01-03-2023")
+#' @examples evds_data(anahtar = "yourkey", verisetleri = c("TP.PR.ARZ01","TP.KTF10"), baslangic_tarihi = "01-01-2020", bitis_tarihi = "01-03-2023")
 #' @import RCurl
 #' @import dplyr
 #' @import stringr
@@ -52,4 +52,3 @@ evds_data <- function(anahtar,
   }
   return(veridf)
 }
-?evds_data2
