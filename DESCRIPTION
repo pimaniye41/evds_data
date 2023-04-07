@@ -9,12 +9,14 @@ Imports:
     RCurl,
     dplyr,
     stringr,
-    XML
+    XML,
+    readr
 Depends:
     RCurl,
     dplyr,
     stringr,
-    XML
+    XML,
+    readr
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
