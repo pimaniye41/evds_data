@@ -18,11 +18,7 @@
 evds_data <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
-  library(readr)
-  library(RCurl)
-  library(dplyr)
-  library(stringr)
-  library(XML)
+
   adres <- "https://evds2.tcmb.gov.tr/service/evds/"
   tarihler <- paste("&startDate=",baslangic_tarihi,"&endDate=",bitis_tarihi, sep="")
   tamamlayici <- paste("&type=csv&key=",anahtar,sep="")
