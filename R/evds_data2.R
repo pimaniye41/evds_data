@@ -15,7 +15,7 @@
 #' @import stringr
 #' @import XML
 
-evds_data2 <- function(anahtar,
+evds_data <- function(anahtar,
                    verisetleri,
                    baslangic_tarihi, bitis_tarihi, frekans = "") {
   library(readr)
