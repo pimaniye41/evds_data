@@ -41,35 +41,28 @@ evds_data <- function(anahtar,
     veridf
   }
 
-  # changing characterized dates with numbers
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q1","03-31")
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q2","06-30")
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q3","09-30")
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q4","12-31")
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S1","06-30")
-  veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S2","12-31")
+  veridf$Tarih <- if(nchar(veridf$Tarih[1]) == 10){
+    veridf$Tarih = as.Date.character(veridf$Tarih,format = "%d-%m-%Y")
+  } else {
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q1","03-31")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q2","06-30")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q3","09-30")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q4","12-31")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S1","06-30")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S2","12-31")
 
-  # monthly data (2022-12 or 2022-1) to (2022-1-01)
-  veridf$Tarih <- ifelse(nchar(veridf$Tarih) == 6 |nchar(veridf$Tarih) == 7 ,
-                         paste(veridf$Tarih,"-01",sep = ""),
-                               veridf$Tarih)
-
-  # yearly data (2023) to (2023-12-31)
-  veridf$Tarih <- ifelse(nchar(veridf$Tarih) == 4,
-                         paste(veridf$Tarih,"-12-31",sep = ""),
-                         veridf$Tarih)
-
-  # changing character date column to date str
-  veridf$Tarih <- as.Date.character(veridf$Tarih,
-                                    tryFormats = c("%d-%m-%y",
-                                                   "%Y-%m-%d"))
-
-  # choosing columns other than date to convert to numeric
-  cols_to_convert <- names(veridf)[-1]
-
-  # use mutate_at() to convert selected columns to numeric
-  veridf <- veridf %>%
-    mutate_at((cols_to_convert), as.numeric)
-
+    if(nchar(veridf$Tarih[1]) == 6 | nchar(veridf$Tarih[1]) == 7){
+      veridf$Tarih <- paste(veridf$Tarih,"-01",sep = "")
+      veridf$Tarih <- as.Date.character(veridf$Tarih,format = "%Y-%m-%d")
+    } else {
+      if(nchar(veridf$Tarih[1]) == 4){
+        veridf$Tarih <- paste(veridf$Tarih,"-12-31",sep = "")
+        veridf$Tarih <- as.Date.character(veridf$Tarih,format = "%Y-%m-%d")
+      }else{
+        veridf$Tarih <- as.Date.character(veridf$Tarih,format = "%Y-%m-%d")
+      }
+    }
+  }
+  veridf <- veridf %>% mutate(across(-1, as.numeric))
   return(veridf)
 }
