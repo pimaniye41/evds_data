@@ -44,12 +44,12 @@ evds_data <- function(anahtar,
   veridf$Tarih <- if(nchar(veridf$Tarih[1]) == 10){
     veridf$Tarih = as.Date.character(veridf$Tarih,format = "%d-%m-%Y")
   } else {
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q1","03-31")
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q2","06-30")
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q3","09-30")
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q4","12-31")
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S1","06-30")
-    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S2","12-31")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q1","03-01")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q2","06-01")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q3","09-01")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "Q4","12-01")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S1","06-01")
+    veridf$Tarih <- str_replace_all(string = veridf$Tarih, "S2","12-01")
 
     if(nchar(veridf$Tarih[1]) == 6 | nchar(veridf$Tarih[1]) == 7){
       veridf$Tarih <- paste(veridf$Tarih,"-01",sep = "")
